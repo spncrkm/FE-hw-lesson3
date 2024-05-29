@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: HTML Forms</title>
+</head>
+<body>
+    
+    <header>
+        <h1>HTML Forms Homework</h1>
+    </header>
+    <main>
+        
+        <h3>HTML Forms simple with various Input Types</h3>
+        
+
+        <form onSubmit="handlesubmit">
+            <label for="email">Email (required):</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Email Here"
+                autocomplete="on"
+                pattern="[\w]+@[\w]+.com"
+                title="Please provide a valid email address"
+                multiple
+                required>
+                <div role="alert" aria-live="assertive"></div>
+            <br>
+        
+            <label for="quantity">Enter a number:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="50" placeholder="0-50" step="5" required>
+                <div role="alert" aria-live="assertive"></div>
+            <br>
+            <label for="date">Enter date:</label>
+            <input type="date" id="date" name="date" min="2021-01-01" max="2030-01-01" placeholder="yyyy-mm-dd" required>
+                <div role="alert" aria-live="assertive"></div>
+            <br>
+            
+            <label for="rating">Rating (between 0-50)</label>
+            <input type="range" id="rating" name="rating" min="0" max="50">
+            <input type="submit">
+                <div role="alert" aria-live="assertive"></div>
+            <br>
+            <label for="rating">Rating range</label>
+            <input type="radio" id="0-10" name="rating" value="0-10">
+            <label for="0-10">0-10</label>
+            <input type="radio" id="11-20" name="rating" value="11-20">
+            <label for="11-20">11-20</label>
+            <input type="radio" id="21-30" name="rating" value="21-30">
+            <label for="21-30">21-30</label>
+            <input type="radio" id="31-40" name="rating" value="31-40">
+            <label for="31-40">31-40</label>
+            <input type="radio" id="41-50" name="rating" value="41-50">
+            <label for="41-50">41-50</label>
+            <br>
+            <label for="color">Choose color</label>
+            <input type="color" id="color" name="color" placeholder="Select color" value="red">
+                <div role="alert" aria-live="assertive"></div>
+            <select name="color" 
+                id="color" 
+                style="background-color:white; 
+                border: solid 1px black;
+                height: 30px; 
+                font-size:18px; 
+                vertical-align:9px;color:black">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+            </select>
+            
+        </form>
+    </main>
+</body>
+</html>
